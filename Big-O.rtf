@@ -1,0 +1,59 @@
+Big O notation is most commonly used by programmers as an approximate measure of how long a computation (algorithm) will take to complete expressed as a function of the size of the input set.
+
+Big O is useful to compare how well two algorithms will scale up as the number of inputs is increased.
+
+More precisely Big O notation is used to express the asymptotic behavior of a function. That means how the function behaves as it approaches infinity.
+
+
+In many cases the "O" of an algorithm will fall into one of the following cases:
+
+O(1) - Time to complete is the same regardless of the size of input set. An example is accessing an array element by index.
+
+O(Log N) - Time to complete increases roughly in line with the log2(n). For example 1024 items takes roughly twice as long as 32 items, because Log2(1024) = 10 and Log2(32) = 5. An example is finding an item in a binary search tree (BST).
+
+O(N) - Time to complete that scales linearly with the size of the input set. In other words if you double the number of items in the input set, the algorithm takes roughly twice as long. An example is counting the number of items in a linked list.
+
+O(N Log N) - Time to complete increases by the number of items times the result of Log2(N). An example of this is heap sort and quick sort.
+
+O(N^2) - Time to complete is roughly equal to the square of the number of items. An example of this is bubble sort.
+
+O(N!) - Time to complete is the factorial of the input set. An example of this is the traveling salesman problem brute-force solution.
+
+
+Big O ignores factors that do not contribute in a meaningful way to the growth curve of a function as the input size increases towards infinity. This means that constants that are added to or multiplied by the function are simply ignored.
+
+
+
+It shows how an algorithm scales based on input size.
+
+O(n2): known as Quadratic complexity
+
+1 item: 1 operations
+10 items: 100 operations
+100 items: 10,000 operations
+Notice that the number of items increases by a factor of 10, but the time increases by a factor of 102. Basically, n=10 and so O(n2) gives us the scaling factor n2 which is 102.
+
+O(n): known as Linear complexity
+
+1 item: 1 second
+10 items: 10 seconds
+100 items: 100 seconds
+This time the number of items increases by a factor of 10, and so does the time. n=10 and so O(n)'s scaling factor is 10.
+
+O(1): known as Constant complexity
+
+1 item: 1 operations
+10 items: 1 operations
+100 items: 1 operations
+The number of items is still increasing by a factor of 10, but the scaling factor of O(1) is always 1.
+
+O(log n): known as Logarithmic complexity
+
+1 item: 1 operations
+10 items: 2 operations
+100 items: 3 operations
+1000 items: 4 operations
+10,000 items: 5 operations
+The number of computations is only increased by a log of the input value. So in this case, assuming each computation takes 1 second, the log of the input n is the time required, hence log n.
+
+That's the gist of it. They reduce the maths down so it might not be exactly n2 or whatever they say it is, but that'll be the dominating factor in the scaling.
